@@ -13,8 +13,9 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_compile_definitions(${PROJECT_NAME} PUBLIC HAVE_CONFIG_H=1)
 add_definitions(-DHAVE_CONFIG_H)
 add_definitions(-DENABLE_PTHREAD)
-#message("--- [embedlog] PROJECT NAME: " ${PROJECT_NAME})
-#target_link_libraries(${PROJECT_NAME} PUBLIC posix_subsys FS)
+
+# message("--- [embedlog] PROJECT NAME: " ${PROJECT_NAME})
+# target_link_libraries(${PROJECT_NAME} PUBLIC posix_subsys FS)
 
 # target_compile_options( ${PROJECT_NAME} PRIVATE
 # $<$<CXX_COMPILER_ID:Clang>:${BUILD_FLAGS_FO_CLANRG}>

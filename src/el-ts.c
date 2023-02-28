@@ -39,7 +39,9 @@
 
 
 #include "el-private.h"
-
+#ifndef _POSIX_MONOTONIC_CLOCK
+#define _POSIX_MONOTONIC_CLOCK 1
+#endif
 #include <time.h>
 
 
