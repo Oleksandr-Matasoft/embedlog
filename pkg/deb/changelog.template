@@ -1,5 +1,0 @@
-libembedlog (@{VERSION}) @{CODENAME}; urgency=low
-
-    * embedlog package
-
- -- Michał Łyszczek <michal.lyszczek@bofc.pl>  @{DATE}

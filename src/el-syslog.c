@@ -63,10 +63,14 @@ int el_tty_open
 	 * with EL_TTY_DEV again) during runtime, so we need to close previous
 	 * socket first */
 
-	el_tty_close(el);
-
-	if ((el->serial_fd = open(dev, O_WRONLY | O_NOCTTY | O_SYNC)) < 0)
-		return -1;
+    el_tty_close(el); // TODO: fix
+#ifndef _ZARM64
+    if ((el->serial_fd = open(dev, O_WRONLY | O_NOCTTY | O_SYNC)) < 0)
+        return -1;
+#else
+    if (el->serial_fd = open(dev, O_WRONLY) < 0)
+        return -1;
+#endif
 
 #if HAVE_TERMIOS_H
 	/*
