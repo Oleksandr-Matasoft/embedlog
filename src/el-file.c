@@ -175,6 +175,7 @@ static void el_symlink_to_newest_log
 	struct el     *el  /* embedlog object to work on */
 )
 {
+	(void)el;
 #if HAVE_SYMLINK
 	if (el->frotate_symlink)
 	{

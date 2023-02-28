@@ -519,7 +519,7 @@ static int el_vooption
 
 	case EL_FSYNC_EVERY:
 		value_ulong = va_arg(ap, unsigned long);
-		VALID(EINVAL, value_ulong >= 0);
+		// VALID(EINVAL, value_ulong >= 0);
 		el_lock(el);
 		el->fsync_every = value_ulong;
 		el_unlock(el);
